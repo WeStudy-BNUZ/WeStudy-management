@@ -94,11 +94,6 @@ export default {
         type,
         currentAuthority: 'admin',
       });
-      const {
-        port,
-        protocol,
-        hostname,
-      } = window.location;
      
       return;
     }
