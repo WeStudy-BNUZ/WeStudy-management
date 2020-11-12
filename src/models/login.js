@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-12 17:31:15
+ * @LastEditTime: 2020-11-12 20:36:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/src/models/login.js
@@ -25,10 +25,11 @@ const Model = {
         type: 'changeLoginStatus',
         payload: response,
       }); // Login successfully
-
+      history.push('/page')
+      history.push('/page')
       if (response.status === 'ok') {
         const urlParams = new URL(window.location.href);
-        history.push('/page')
+        
         const params = getPageQuery();
         message.success('🎉 🎉 🎉  登录成功！');
         let { redirect } = params;

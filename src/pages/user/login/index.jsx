@@ -4,7 +4,7 @@ import {
 import { Alert, Space, message, Tabs, Avatar } from 'antd';
 import React, { useState } from 'react';
 import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-form';
-import { connect, useIntl, FormattedMessage } from 'umi';
+import { connect, useIntl, FormattedMessage, history } from 'umi';
 import { getFakeCaptcha } from '@/services/login';
 import styles from './index.less';
 
@@ -59,6 +59,7 @@ const Login = (props) => {
         }}
         onFinish={async (values) => {
           handleSubmit(values);
+          history.push('/page')
         }}
       >
         <Tabs activeKey={type} onChange={setType}>

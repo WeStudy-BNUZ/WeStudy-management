@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-12 19:50:34
+ * @LastEditTime: 2020-11-12 22:45:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/README.md
@@ -25,7 +25,7 @@ git clone https://github.com/Lavieenrose99/WeStudymanagement.git
 3. npm install
 
 4.  npm start / npm run dev
-est
+
 ```
 
 ## More

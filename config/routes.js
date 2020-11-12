@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-12 16:25:55
+ * @LastEditTime: 2020-11-12 20:32:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/config/routes.js
@@ -50,6 +50,20 @@ export default [
              
             ],
           },
+          {
+            path: '/page/test_table',
+            name: '表格',
+            icon: 'table',
+            routes: [
+              {
+                path: '/page/test_table/index',
+                name: '表格练习',
+                icon: 'setting',
+                component: './404',
+              }
+             
+            ],
+          },
 
           {
             component: './404',
@@ -57,7 +71,7 @@ export default [
         ],
       },
       {
-        component: './user/login/index',
+        component: './user/login/index'
       }
     ],
   }
