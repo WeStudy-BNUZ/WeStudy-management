@@ -1,67 +1,64 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-12 15:05:07
+ * @LastEditTime: 2020-11-12 16:25:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /WeStudy-management/config/routes.js
+ */
 export default [
   {
-    path: '/user',
-    component: '../layouts/UserLayout',
-    routes: [
-      {
-        name: 'login',
-        path: '/user/login',
-        component: './user/login',
-      },
-    ],
-  },
-  {
     path: '/',
-    component: '../layouts/SecurityLayout',
     routes: [
       {
-        path: '/',
-        component: '../layouts/BasicLayout',
-        authority: ['admin', 'user'],
+        path: '/sign',
+        //component: '../layouts/UserLayout',
         routes: [
           {
-            path: '/',
-            redirect: '/welcome',
-          },
-          {
-            path: '/welcome',
-            name: 'welcome',
-            icon: 'smile',
-            component: './Welcome',
-          },
-          {
-            path: '/admin',
-            name: 'admin',
-            icon: 'crown',
-            component: './Admin',
-            authority: ['admin'],
-            routes: [
-              {
-                path: '/admin/sub-page',
-                name: 'sub-page',
-                icon: 'smile',
-                component: './Welcome',
-                authority: ['admin'],
-              },
+            path: '/sign',
+            redirect: '/sign/user/login',
+          }, {
+            path: '/sign/user',
+            routes: [{
+              path: '/sign/user/login',
+              component: './user/login/index',
+            }
             ],
-          },
-          {
-            name: 'list.table-list',
-            icon: 'table',
-            path: '/list',
-            component: './ListTableList',
-          },
-          {
-            component: './404',
-          },
+          }
+        
         ],
       },
       {
-        component: './404',
+        path: '/page',
+        component: '../layouts/BasicLayout',
+        routes: [
+          {
+            path: '/page',
+            redirect: '/page/seek/index',
+          },
+          {
+            path: '/page/seek',
+            name: '统计页',
+            icon: 'dashboard',
+            routes: [
+              {
+                path: '/page/seek/index',
+                name: '数据统计',
+                icon: 'setting',
+                component: './Welcome',
+              }
+             
+            ],
+          },
+
+          {
+            component: './404',
+          }
+        ],
       },
+      {
+        component: './user/login/index',
+      }
     ],
-  },
-  {
-    component: './404',
-  },
+  }
 ];

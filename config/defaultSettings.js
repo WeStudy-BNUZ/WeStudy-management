@@ -1,5 +1,13 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-12 15:05:07
+ * @LastEditTime: 2020-11-12 17:00:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /WeStudy-management/config/defaultSettings.js
+ */
 const proSettings = {
-  navTheme: 'dark',
+  navTheme: 'light',
   // 拂晓蓝
   primaryColor: '#1890ff',
   layout: 'side',
@@ -7,7 +15,7 @@ const proSettings = {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: 'Ant Design Pro',
+  title: 'WeStudy',
   pwa: false,
   iconfontUrl: '',
 };

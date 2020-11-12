@@ -1,9 +1,18 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-12 15:05:07
+ * @LastEditTime: 2020-11-12 17:31:15
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /WeStudy-management/src/models/login.js
+ */
 import { stringify } from 'querystring';
 import { history } from 'umi';
 import { fakeAccountLogin } from '@/services/login';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
 import { message } from 'antd';
+
 const Model = {
   namespace: 'login',
   state: {
@@ -19,13 +28,13 @@ const Model = {
 
       if (response.status === 'ok') {
         const urlParams = new URL(window.location.href);
+        history.push('/page')
         const params = getPageQuery();
         message.success('🎉 🎉 🎉  登录成功！');
         let { redirect } = params;
-
         if (redirect) {
           const redirectUrlParams = new URL(redirect);
-
+        
           if (redirectUrlParams.origin === urlParams.origin) {
             redirect = redirect.substr(urlParams.origin.length);
 
@@ -33,11 +42,10 @@ const Model = {
               redirect = redirect.substr(redirect.indexOf('#') + 1);
             }
           } else {
-            window.location.href = '/';
+            window.location.href = '/page';
             return;
           }
         }
-
         history.replace(redirect || '/');
       }
     },

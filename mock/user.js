@@ -1,3 +1,4 @@
+import { history, connect } from 'umi';
 const waitTime = (time = 100) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -86,14 +87,19 @@ export default {
   ],
   'POST /api/login/account': async (req, res) => {
     const { password, userName, type } = req.body;
-    await waitTime(2000);
-
-    if (password === 'ant.design' && userName === 'admin') {
+   
+    if (password === '123' && userName === 'admin') {
       res.send({
         status: 'ok',
         type,
         currentAuthority: 'admin',
       });
+      const {
+        port,
+        protocol,
+        hostname,
+      } = window.location;
+     
       return;
     }
 
@@ -103,6 +109,7 @@ export default {
         type,
         currentAuthority: 'user',
       });
+     
       return;
     }
 
