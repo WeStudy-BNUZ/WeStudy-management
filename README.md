@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-12 22:45:40
+ * @LastEditTime: 2020-11-15 17:49:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/README.md
@@ -22,7 +22,7 @@ git clone https://github.com/Lavieenrose99/WeStudymanagement.git
 ```
 将项目拷贝到本地
 
-3. npm install
+3. npm install 不行的话试一试 npm i
 
 4.  npm start / npm run dev
 
