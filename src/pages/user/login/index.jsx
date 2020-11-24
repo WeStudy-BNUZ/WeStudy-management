@@ -5,6 +5,7 @@ import { Alert, Space, message, Tabs, Avatar } from 'antd';
 import React, { useState } from 'react';
 import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-form';
 import { connect, useIntl, FormattedMessage, history } from 'umi';
+import request from '@/utils/request';
 import { getFakeCaptcha } from '@/services/login';
 import styles from './index.less';
 
@@ -27,6 +28,9 @@ const Login = (props) => {
 
   const handleSubmit = (values) => {
     const { dispatch } = props;
+    request('/api.test/test',{
+      method: 'GET'
+    })
     dispatch({
       type: 'login/login',
       payload: { ...values, type },
