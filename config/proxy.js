@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-24 19:04:13
+ * @LastEditTime: 2020-11-26 16:44:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/config/proxy.js
@@ -39,6 +39,13 @@ export default {
       changeOrigin: true,
       pathRewrite: {
         '^': '',
+      },
+    },
+    '/api.test/': {
+      target: 'http://47.115.174.112:8088',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api.test': '',
       },
     },
   },
