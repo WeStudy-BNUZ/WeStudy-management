@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 15:05:07
- * @LastEditTime: 2020-11-23 22:58:56
+ * @LastEditTime: 2020-11-24 19:04:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /WeStudy-management/config/proxy.js
@@ -35,7 +35,7 @@ export default {
   },
   pre: {
     '/api/': {
-      target: 'your pre url',
+      target: 'https://preview.pro.ant.design',
       changeOrigin: true,
       pathRewrite: {
         '^': '',
