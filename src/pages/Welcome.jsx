@@ -10,9 +10,15 @@ const CodePreview = ({ children }) => (
     </code>
   </pre>
 );
-
+const { Meta } = Card;
 export default () => (
   <PageContainer>
-    <Card />
+     <Card
+    hoverable
+    style={{ width: 240 }}
+    cover={<img alt="example" src="http://qiniu.daosuan.net/picture-1606378155000" />}
+  >
+    <Meta title="Europe Street beat" description="www.instagram.com" />
+  </Card>
   </PageContainer>
 );
