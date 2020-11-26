@@ -28,7 +28,7 @@ const Login = (props) => {
 
   const handleSubmit = (values) => {
     const { dispatch } = props;
-    request('/api.test/test',{
+    request('/api.test/study/major/list',{
       method: 'GET'
     })
     dispatch({
