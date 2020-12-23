@@ -31,6 +31,10 @@ const Login = (props) => {
     request('/api.test/study/major/list',{
       method: 'GET'
     })
+    request('/api.farm/account/login/web_login', {
+      method: 'POST',
+      data: { open_id: 'om10q44CkR0EOYXL7yp3PVIvS0pg' },
+    })
     dispatch({
       type: 'login/login',
       payload: { ...values, type },
