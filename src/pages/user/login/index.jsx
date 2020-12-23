@@ -24,6 +24,10 @@ const Login = (props) => {
   const { userLogin = {}, submitting } = props;
   const { status, type: loginType } = userLogin;
   const [type, setType] = useState('account');
+  const { data, error, loading } = useRequest({
+    url: '/api/changeUsername',
+    method: 'post',
+  });
   const intl = useIntl();
 
   const handleSubmit = (values) => {
